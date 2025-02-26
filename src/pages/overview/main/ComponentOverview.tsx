@@ -1,9 +1,7 @@
-import GlobalSvgSelector from "../../assets/global/GlobalSvgSelector";
-import s from "./../main/Main.module.scss";
-
+import s from "./ComponentOverview.module.scss";
 type Props = {};
 
-export const ComponentOver = (props: Props) => {
+export const ComponentOverview = (props: Props) => {
   return (
     <div>
       <div className="content_overview">
@@ -152,4 +150,3 @@ export const ComponentOver = (props: Props) => {
   );
 };
 
-export default ComponentOver;
