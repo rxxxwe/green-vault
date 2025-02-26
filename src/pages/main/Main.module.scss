@@ -1,0 +1,168 @@
+@import "../../styles/index.module.scss";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+.content_overview {
+  display: flex;
+  margin-left: 90px;
+  flex-direction: column;
+  font-family: Montserrat, serif;
+}
+
+.container_overview {
+  margin-left: 110px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left_container {
+  display: flex;
+  flex-direction: column;
+  margin-right: 60px;
+  background-color: var(#{--components-background-light});
+}
+.ref {
+  margin-top: 46px;
+  margin-left: 600px;
+  display: flex;
+  margin-right: 96px;
+  margin-bottom: 70px;
+}
+.ref_item {
+  position: relative;
+  font-weight: 400;
+  font-size: 16px;
+  color: black;
+  padding-right: 97px;
+  padding-left: 40px;
+}
+
+.ref_item:after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  transform: translateY(-50%) rotate(-315deg);
+  right: 0;
+  width: 12px;
+  height: 12px;
+  border-width: 0 2px 2px 0;
+  border-style: solid;
+  border-color: #000;
+}
+
+.header_left_container {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 143%;
+  letter-spacing: 0.02em;
+}
+
+.column_deposit {
+  margin-top: 27px;
+  display: flex;
+  gap: 116px;
+}
+
+.operation {
+  margin-top: 40px;
+}
+.column_deposit {
+  display: flex;
+  gap: 162px;
+  .dep {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 143%;
+    letter-spacing: 0.02em;
+  }
+  .balance {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+  }
+}
+
+.quantity_crypt {
+  display: flex;
+  gap: 222px;
+  margin-bottom: 30px;
+  .quantity {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 100%;
+    color: var(--black);
+  }
+  .crypt {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 100%;
+  }
+}
+
+.header_opertion {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 143%;
+  letter-spacing: 0.02em;
+}
+
+.container_opertion {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.operation_percent ul {
+  flex-direction: column;
+  display: flex;
+  gap: 10px;
+  list-style: none;
+}
+
+.operation_crypt ul li {
+  list-style: none;
+
+  font-size: 14px;
+  line-height: 143%;
+}
+.operation_crypt ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.more_info .info {
+  position: relative;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 125%;
+  margin-bottom: 30px;
+  padding-left: 18px;
+}
+.more_info .info:before {
+  position: absolute;
+  content: "";
+  top: -19%;
+  left: 0;
+  border-radius: 0 14px 0 7px;
+  width: 4px;
+  height: 60px;
+  border-style: solid;
+  border-color: yellow;
+  background-color: yellow;
+}
+
+.pay_crypt .pay {
+  border-radius: 7px;
+  width: 420px;
+  height: 65px;
+  background: yellow;
+  font-weight: 500;
+  font-size: 23px;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+.right_container {
+  opacity: 0.1;
+}
