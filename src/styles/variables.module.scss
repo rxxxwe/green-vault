@@ -1,5 +1,6 @@
 $body-background-dark: #0d1117;
 $body-background-light: #fff;
+$body-background-green-light: #ecfff5;
 
 $components-background-dark: #4f4f4f;
 $components-background-light: #fff;
@@ -12,6 +13,7 @@ $dark-color: #000;
   --body-background-dark: #{$body-background-dark};
   --body-background-light: #{$body-background-light};
   --body-background-default: var(#{--body-background-light});
+  --body-background-green-light: #{$body-background-green-light};
 
   //components-background
   --components-background-dark: #{$components-background-dark};
@@ -36,5 +38,3 @@ $dark-color: #000;
   --body-background: #0d1117;
   --text-color: #fff;
 }
-
-

@@ -3,12 +3,11 @@
 
 * {
   box-sizing: border-box;
-  font-family: Ubnutu, serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
-  font-family: Ubnutu, serif;
   margin: 0;
   display: flex;
-  background: var(#{--body-background-default});
+  background: var(#{--body-background-green-light});
 }
