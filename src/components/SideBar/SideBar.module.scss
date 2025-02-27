@@ -1,13 +1,18 @@
-@import "../../styles/variables.module";
+@import "../../styles/variables.module.scss";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 @import "../../styles/index.module.scss";
+* {
+  box-sizing: border-box;
+}
+
 .container {
-  width: 200px;
+  width: 242px;
   height: 900px;
   display: flex;
   flex-direction: column;
   background-color: $body-background-light;
   justify-content: space-between;
+  font-family: Ubuntu, serif;
 }
 
 .sidebar__top {
@@ -36,11 +41,10 @@
 .sidebar_nav,
 .pages_item_icon,
 .pages_item_label li {
-  font-family: Ubuntu, serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 143%;
-  color: var(#{--text-color-dark});
+  color: $dark-color;
 }
 
 .pages_item_label {
@@ -72,7 +76,6 @@
   line-height: 143%;
   text-align: center;
   color: black;
-  font-family: Ubuntu, serif;
   display: flex;
   gap: 48px;
 }
@@ -80,7 +83,6 @@
   position: relative;
   padding-right: 20px;
   cursor: pointer;
-  font-family: Ubuntu, serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 143%;
@@ -108,7 +110,6 @@
   margin-bottom: 37px;
   margin-left: 18px;
   .change_theme_item {
-    font-family: Ubuntu, serif;
     font-weight: 400;
     font-size: 14px;
     line-height: 143%;
@@ -123,7 +124,6 @@
 }
 
 .confidentiality {
-  font-family: Ubuntu, serif;
   font-weight: 400;
   font-size: 10px;
   line-height: 200%;
