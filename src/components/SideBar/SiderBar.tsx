@@ -58,7 +58,6 @@ export const SideBar = (props: Props) => {
 
   return (
     <div className={s.container}>
-      {" "}
       <div className={s.sidebar__top}>
         <div className={s.logo}>
           <a>

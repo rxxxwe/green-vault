@@ -1,4 +1,5 @@
-@import "../../../styles/index.module";
+@import "../../../styles/index.module.scss";
+@import "../../../styles/variables.module.scss";
 
 .content_overview {
   display: flex;
@@ -8,7 +9,6 @@
 }
 
 .container_overview {
-  margin-left: 110px;
   display: flex;
   justify-content: space-between;
 }
@@ -25,9 +25,9 @@
 .ref {
   display: flex;
   align-items: center;
-  margin-top: 46px;
-  margin-left: 600px;
-  margin-bottom: 70px;
+  margin-left: 390px;
+  margin-top: 30px;
+  margin-bottom: 20px;
   gap: 10px;
 }
 .ref_item {
@@ -108,14 +108,10 @@
   gap: 116px;
 }
 
-.operation {
-  padding: 20px 10px 0 10px;
-  border-radius: 7px;
-  background: var(#{--body-background-green-light});
-}
 .column_deposit {
   display: flex;
-  gap: 162px;
+  justify-content: space-between;
+  margin-bottom: 5px;
   .dep {
     font-weight: 700;
     font-size: 14px;
@@ -123,15 +119,28 @@
     letter-spacing: 0.02em;
   }
   .balance {
+    display: flex;
     font-weight: 400;
     font-size: 14px;
     line-height: 143%;
+  }
+  .btn__max {
+    border: none;
+    border-radius: 13px;
+    margin-left: 7px;
+    background-color: var(--components-background-light);
+    box-shadow: 0 0 5px 0 rgba(212, 212, 212, 0.5);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: var(--black);
+    cursor: pointer;
   }
 }
 
 .quantity_crypt {
   display: flex;
-  gap: 230px;
+  justify-content: space-between;
   .quantity {
     font-weight: 400;
     font-size: 36px;
@@ -145,7 +154,14 @@
   }
 }
 
+.operation {
+  padding: 20px 20px 10px 20px;
+  border-radius: 7px;
+  background: var(--body-background-green-light);
+}
+
 .header_operation {
+  margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
   line-height: 143%;
@@ -155,55 +171,60 @@
 .container_operation {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .operation_percent ul {
-  flex-direction: column;
   display: flex;
+  flex-direction: column;
   gap: 10px;
   list-style: none;
 }
-
-.operation_crypt ul li {
-  list-style: none;
-
+.operation_percent ul li {
+  font-weight: 400;
   font-size: 14px;
   line-height: 143%;
 }
+
 .operation_crypt ul {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
+.operation_crypt ul li {
+  font-weight: 300;
+  list-style: none;
+  font-size: 14px;
+  line-height: 143%;
+}
+.operation_crypt ul li b {
+  font-weight: 700;
+}
 
 .more_info .info {
   position: relative;
-
   font-weight: 400;
   font-size: 12px;
   line-height: 125%;
-  margin-bottom: 30px;
-  padding-left: 18px;
 }
 .more_info .info:before {
   position: absolute;
   content: "";
-  top: -19%;
-  left: 0;
+  bottom: -10px;
+  left: -20px;
   border-radius: 0 14px 0 7px;
   width: 4px;
   height: 60px;
   border-style: solid;
-  border-color: yellow;
-  background-color: yellow;
+  border-color: var(--components-background-green);
+  background-color: var(--components-background-green);
 }
 
-.pay_crypt .pay {
-  border-radius: 7px;
-  width: 420px;
+.pay {
+  width: 100%;
   height: 65px;
-  background: yellow;
+  border-radius: 7px;
+  background-color: var(--components-background-green);
   font-weight: 500;
   font-size: 23px;
   line-height: 100%;

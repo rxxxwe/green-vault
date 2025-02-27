@@ -60,7 +60,10 @@ export const ComponentOverview = (props: Props) => {
           <div className={s.green_block}>
             <div className={s.column_deposit}>
               <div className={s.dep}>Your deposit</div>
-              <div className={s.balance}>Balance:12.356 max</div>
+              <div className={s.balance}>
+                Balance: 12.356
+                <button className={s.btn__max}>max</button>
+              </div>
             </div>
             <div className={s.quantity_crypt}>
               <div className={s.quantity}>11.213</div>
@@ -108,20 +111,20 @@ export const ComponentOverview = (props: Props) => {
                 </ul>
               </div>
             </div>
-          </div>
-          <div className={s.more_info}>
-            <div className={s.info}>
-              Before investing, carefully consider all risks because by clicking
-              the
-              <br /> button below you agree that only you are responsible for
-              all financial
-              <br /> losses incurred
+            <div className={s.more_info}>
+              <div className={s.info}>
+                Before investing, carefully consider all risks because by
+                clicking the
+                <br /> button below you agree that only you are responsible for
+                all financial
+                <br /> losses incurred
+              </div>
             </div>
           </div>
-          <div className={s.pay_crypt}>
-            <button className={s.pay}> Supply 11.213 TON</button>
-          </div>
+
+          <button className={s.pay}> Supply 11.213 TON</button>
         </div>
+
         <div className={s.right_container}>
           <div className={s.header_left_container}>
             Supply Funds for ThriveHarvest
