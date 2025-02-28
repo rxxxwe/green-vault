@@ -219,13 +219,12 @@
 .map_container {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   gap: 22px;
 
   .adress_dark_container {
     padding: 36px 24px;
     border-radius: 17px;
-    width: 100%;
-    height: 133px;
     box-shadow: 0 0 12px 0 rgba(212, 212, 212, 0.5);
     background: $body-background-light;
   }
@@ -237,16 +236,12 @@
   .adress b {
     font-weight: 700;
   }
-  .map {
+  iframe {
+    border: none;
     width: 460px;
     height: 357px;
-    border-radius: 17px;
     overflow: hidden;
-    box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
-  }
-  iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
+    border-radius: 17px;
+    box-shadow: 0 0 12px 0 rgba(212, 212, 212, 0.5);
   }
 }

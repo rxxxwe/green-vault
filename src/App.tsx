@@ -5,10 +5,10 @@ import { ContactUs } from "./pages/contactUs/ContactUs";
 function App() {
   return (
     <div className="App">
-      <Overview />
+      {/* <Overview /> */}
       {/* <Notification /> */}
       {/* <Documents /> */}
-      {/* <ContactUs /> */}
+      <ContactUs />
     </div>
   );
 }

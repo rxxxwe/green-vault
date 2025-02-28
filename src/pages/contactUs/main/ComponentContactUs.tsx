@@ -125,7 +125,14 @@ export const ComponentContactUs = (props: Props) => {
           </div>
         </div>
 
-        <div className={s.map}>map</div>
+        <div className={s.map}>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d386.81900106773253!2d-75.52562932907388!3d39.13942471079662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c7634b70300001%3A0xf9dfec8064c4e95e!2zMTExMUIgUyBHb3Zlcm5vcnMgQXZlLCBEb3ZlciwgREUgMTk5MDQsINCh0KjQkA!5e0!3m2!1sru!2sru!4v1740775237118!5m2!1sru!2sru"
+            width="460"
+            height="357"
+            loading="lazy"
+          ></iframe>
+        </div>
       </div>
     </div>
   );
