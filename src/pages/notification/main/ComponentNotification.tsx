@@ -1,21 +1,69 @@
-import React from "react";
+import { useState } from "react";
 import s from "./ComponentNotification.module.scss";
 import GlobalSvgSelector from "../../../assets/global/GlobalSvgSelector";
 type Props = {};
 
 export const ComponentNotification = (props: Props) => {
+  const [isOpenEmail, setIsOpenEmail] = useState(false);
+  const [isOpenWallet, setIsOpenWallet] = useState(false);
+
+  const toggleEmailDropdown = () => {
+    setIsOpenEmail(!isOpenEmail);
+    setIsOpenWallet(false);
+  };
+
+  const toggleWalletDropdown = () => {
+    setIsOpenWallet(!isOpenWallet);
+    setIsOpenEmail(false);
+  };
+
   return (
     <div className={s.content_notification}>
       <div className={s.ref}>
-        <div className={s.ref_item}>antonzhdanovich@gmail.com</div>
-        <div className={s.ref_item}>QUBqS-7t...kG-3U8</div>
+        <div className={s.ref_item} onClick={toggleEmailDropdown}>
+          antonzhdanovich@gmail.com
+          <div
+            className={`${s.dropdown} ${isOpenEmail ? s.dropdown_active : ""}`}
+          >
+            <div
+              className={s.dropdown_item}
+              onClick={() =>
+                navigator.clipboard.writeText("antonzhdanovich@gmail.com")
+              }
+            >
+              Copy Wallet
+            </div>
+            <div className={s.dropdown_item}>Disconnect</div>
+          </div>
+        </div>
+
+        <div className={s.ref_item} onClick={toggleWalletDropdown}>
+          QUBqS-7t...kG-3U8
+          <div
+            className={`${s.dropdown} ${isOpenWallet ? s.dropdown_active : ""}`}
+          >
+            <div
+              className={s.dropdown_item}
+              onClick={() => navigator.clipboard.writeText("QUBqS-7t...kG-3U8")}
+            >
+              Copy Wallet
+            </div>
+            <div className={s.dropdown_item}>Disconnect</div>
+          </div>
+        </div>
       </div>
+
       <div className={s.search_container}>
         <span className={s.search_icon}>
           <GlobalSvgSelector id="search" className="bi_search" />
         </span>
-        <input type="search" className={s.search_input} placeholder="Search..." />
+        <input
+          type="search"
+          className={s.search_input}
+          placeholder="Search..."
+        />
       </div>
+
       <div className={s.filters}>
         <div className={s.filters_container}>
           <span className={s.filters_label}>Filters:</span>

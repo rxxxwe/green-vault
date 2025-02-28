@@ -62,7 +62,7 @@ export const ComponentOverview = (props: Props) => {
               <div className={s.dep}>Your deposit</div>
               <div className={s.balance}>
                 Balance: 12.356
-                <button className={s.btn__max}>max</button>
+                <button className={s.btn_max}>max</button>
               </div>
             </div>
             <div className={s.quantity_crypt}>

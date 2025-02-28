@@ -1,14 +1,59 @@
-import GlobalSvgSelector from "../../../assets/global/GlobalSvgSelector";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import s from "./ComponentDocument.module.scss";
+import GlobalSvgSelector from "../../../assets/global/GlobalSvgSelector";
 type Props = {};
 
 export const ComponentDocument = (props: Props) => {
+  const [isOpenEmail, setIsOpenEmail] = useState(false);
+  const [isOpenWallet, setIsOpenWallet] = useState(false);
+
+  const toggleEmailDropdown = () => {
+    setIsOpenEmail(!isOpenEmail);
+    setIsOpenWallet(false);
+  };
+
+  const toggleWalletDropdown = () => {
+    setIsOpenWallet(!isOpenWallet);
+    setIsOpenEmail(false);
+  };
+
   return (
     <div className={s.content_document}>
       <div className={s.ref}>
-        <div className={s.ref_item}>antonzhdanovich@gmail.com</div>
-        <div className={s.ref_item}>QUBqS-7t...kG-3U8</div>
+        <div className={s.ref_item} onClick={toggleEmailDropdown}>
+          antonzhdanovich@gmail.com
+          <div
+            className={`${s.dropdown} ${isOpenEmail ? s.dropdown_active : ""}`}
+          >
+            <div
+              className={s.dropdown_item}
+              onClick={() =>
+                navigator.clipboard.writeText("antonzhdanovich@gmail.com")
+              }
+            >
+              Copy Wallet
+            </div>
+            <div className={s.dropdown_item}>Disconnect</div>
+          </div>
+        </div>
+
+        <div className={s.ref_item} onClick={toggleWalletDropdown}>
+          QUBqS-7t...kG-3U8
+          <div
+            className={`${s.dropdown} ${isOpenWallet ? s.dropdown_active : ""}`}
+          >
+            <div
+              className={s.dropdown_item}
+              onClick={() => navigator.clipboard.writeText("QUBqS-7t...kG-3U8")}
+            >
+              Copy Wallet
+            </div>
+            <div className={s.dropdown_item}>Disconnect</div>
+          </div>
+        </div>
       </div>
+
       <div className={s.search_container}>
         <span className={s.search_icon}>
           <GlobalSvgSelector id="search" className="bi_search" />
@@ -19,6 +64,7 @@ export const ComponentDocument = (props: Props) => {
           placeholder="Search..."
         />
       </div>
+
       <div className={s.filters}>
         <div className={s.filters_container}>
           <span className={s.filters_label}>Filters:</span>
@@ -30,7 +76,7 @@ export const ComponentDocument = (props: Props) => {
               value="urgent"
               className={s.checkbox}
             />
-            <span className={s.filter_text}>Technical Docs</span>
+            <span className={s.filter_text}>Urgent</span>
           </label>
           <label className={s.filter_item}>
             <input
@@ -40,7 +86,7 @@ export const ComponentDocument = (props: Props) => {
               value="news"
               className={s.checkbox}
             />
-            <span className={s.filter_text}>Account Statement</span>
+            <span className={s.filter_text}>News</span>
           </label>
           <label className={s.filter_item}>
             <input
@@ -50,7 +96,7 @@ export const ComponentDocument = (props: Props) => {
               value="operations"
               className={s.checkbox}
             />
-            <span className={s.filter_text}>Annual Reports</span>
+            <span className={s.filter_text}>Operations</span>
           </label>
           <label className={s.filter_item}>
             <input
@@ -60,7 +106,7 @@ export const ComponentDocument = (props: Props) => {
               value="documents"
               className={s.checkbox}
             />
-            <span className={s.filter_text}>Risk Disclosure</span>
+            <span className={s.filter_text}>Documents</span>
           </label>
           <label className={s.filter_item}>
             <input
@@ -70,7 +116,7 @@ export const ComponentDocument = (props: Props) => {
               value="support"
               className={s.checkbox}
             />
-            <span className={s.filter_text}>Legal Docs</span>
+            <span className={s.filter_text}>Support</span>
           </label>
         </div>
       </div>
@@ -83,12 +129,12 @@ export const ComponentDocument = (props: Props) => {
             transaction to withdraw 5.639 ETH was successful. The funds
           </p>
           <div className={s.download}>
-            <a>
-              <span className={s.icon_download}>
-                <GlobalSvgSelector id="download" />
-              </span>
-              <span className={s.text_download}>Download</span>
-            </a>
+            <span className={s.icon_download}>
+              <GlobalSvgSelector id="download" />
+            </span>
+            <Link to={"/"} className={s.text_download}>
+              Download
+            </Link>
           </div>
         </div>
 
@@ -99,12 +145,12 @@ export const ComponentDocument = (props: Props) => {
             transaction to withdraw 5.639 ETH was successful. The funds
           </p>
           <div className={s.download}>
-            <a>
-              <span className={s.icon_download}>
-                <GlobalSvgSelector id="download" />
-              </span>
-              <span className={s.text_download}>Download</span>
-            </a>
+            <span className={s.icon_download}>
+              <GlobalSvgSelector id="download" />
+            </span>
+            <Link to={"/"} className={s.text_download}>
+              Download
+            </Link>
           </div>
         </div>
 
@@ -115,12 +161,12 @@ export const ComponentDocument = (props: Props) => {
             transaction to withdraw 5.639 ETH was successful. The funds
           </p>
           <div className={s.download}>
-            <a>
-              <span className={s.icon_download}>
-                <GlobalSvgSelector id="download" />
-              </span>
-              <span className={s.text_download}>Download</span>
-            </a>
+            <span className={s.icon_download}>
+              <GlobalSvgSelector id="download" />
+            </span>
+            <Link to={"/"} className={s.text_download}>
+              Download
+            </Link>
           </div>
         </div>
 
@@ -131,12 +177,12 @@ export const ComponentDocument = (props: Props) => {
             transaction to withdraw 5.639 ETH was successful. The funds
           </p>
           <div className={s.download}>
-            <a>
-              <span className={s.icon_download}>
-                <GlobalSvgSelector id="download" />
-              </span>
-              <span className={s.text_download}>Download</span>
-            </a>
+            <span className={s.icon_download}>
+              <GlobalSvgSelector id="download" />
+            </span>
+            <Link to={"/"} className={s.text_download}>
+              Download
+            </Link>
           </div>
         </div>
 
@@ -147,12 +193,12 @@ export const ComponentDocument = (props: Props) => {
             transaction to withdraw 5.639 ETH was successful. The funds
           </p>
           <div className={s.download}>
-            <a>
-              <span className={s.icon_download}>
-                <GlobalSvgSelector id="download" />
-              </span>
-              <span className={s.text_download}>Download</span>
-            </a>
+            <span className={s.icon_download}>
+              <GlobalSvgSelector id="download" />
+            </span>
+            <Link to={"/"} className={s.text_download}>
+              Download
+            </Link>
           </div>
         </div>
 
@@ -163,12 +209,12 @@ export const ComponentDocument = (props: Props) => {
             transaction to withdraw 5.639 ETH was successful. The funds
           </p>
           <div className={s.download}>
-            <a>
-              <span className={s.icon_download}>
-                <GlobalSvgSelector id="download" />
-              </span>
-              <span className={s.text_download}>Download</span>
-            </a>
+            <span className={s.icon_download}>
+              <GlobalSvgSelector id="download" />
+            </span>
+            <Link to={"/"} className={s.text_download}>
+              Download
+            </Link>
           </div>
         </div>
       </div>
