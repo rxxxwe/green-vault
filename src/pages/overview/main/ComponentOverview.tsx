@@ -1,5 +1,8 @@
 import { useState } from "react";
 import s from "./ComponentOverview.module.scss";
+import graph from "../../../assets/graph.png";
+import analysis from "../../../assets/analysis.png";
+import risks from "../../../assets/risks.png";
 type Props = {};
 
 export const ComponentOverview = (props: Props) => {
@@ -17,7 +20,7 @@ export const ComponentOverview = (props: Props) => {
   };
 
   return (
-    <div>
+    <div className={s.content_overview}>
       <div className={s.ref}>
         <div className={s.ref_item} onClick={toggleEmailDropdown}>
           antonzhdanovich@gmail.com
@@ -52,146 +55,95 @@ export const ComponentOverview = (props: Props) => {
         </div>
       </div>
 
-      <div className={s.container_overview}>
-        <div className={s.left_container}>
-          <div className={s.header_left_container}>
-            Supply Funds for ThriveHarvest
-          </div>
-          <div className={s.green_block}>
-            <div className={s.column_deposit}>
-              <div className={s.dep}>Your deposit</div>
-              <div className={s.balance}>
-                Balance: 12.356
-                <button className={s.btn_max}>max</button>
-              </div>
-            </div>
-            <div className={s.quantity_crypt}>
-              <div className={s.quantity}>11.213</div>
-              <div className={s.crypt}>ETH</div>
-            </div>
-          </div>
-
-          <div className={s.operation}>
-            <div className={s.header_operation}>Operation details</div>
-            <div className={s.container_operation}>
-              <div className={s.operation_percent}>
-                <ul>
-                  <li>
-                    Beefy protocol
-                    <br /> 82%
-                  </li>
-                  <li>
-                    Insurance fund (USDT)
-                    <br /> 15%
-                  </li>
-                  <li>
-                    GreenVault comission
-                    <br /> 2%
-                  </li>
-                  <li>
-                    Network commission
-                    <br /> 1%
-                  </li>
-                </ul>
-              </div>
-              <div className={s.operation_crypt}>
-                <ul>
-                  <li>
-                    <b>9.195</b> ETH
-                  </li>
-                  <li>
-                    <b>1.682</b> ETH
-                  </li>
-                  <li>
-                    <b>0.224</b> ETH
-                  </li>
-                  <li>
-                    <b>0.112</b> ETH
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className={s.more_info}>
-              <div className={s.info}>
-                Before investing, carefully consider all risks because by
-                clicking the
-                <br /> button below you agree that only you are responsible for
-                all financial
-                <br /> losses incurred
-              </div>
-            </div>
-          </div>
-
-          <button className={s.pay}> Supply 11.213 TON</button>
+      <div className={s.top_container}>
+        <div className={s.graph}>
+          <img src={graph} alt="" />
         </div>
 
-        <div className={s.right_container}>
-          <div className={s.header_left_container}>
-            Supply Funds for ThriveHarvest
-          </div>
-          <div className={s.column_deposit}>
-            <div className={s.dep}>Your deposit</div>
-            <div className={s.balance}>Balance:12.356 max</div>
-          </div>
-          <div className={s.quantity_crypt}>
-            <div className={s.quantity}>11.213</div>
-            <div className={s.crypt}>ETH</div>
-          </div>
-
-          <div className={s.operation}>
-            <div className={s.header_opertion}>Operation details</div>
-            <div className={s.container_opertion}>
-              <div className={s.operation_percent}>
-                <ul>
-                  <li>
-                    Beefy protocol
-                    <br /> 82%
-                  </li>
-                  <li>
-                    Insurance fund (USDT)
-                    <br /> 15%
-                  </li>
-                  <li>
-                    GreenVault comission
-                    <br /> 2%
-                  </li>
-                  <li>
-                    Network commission
-                    <br /> 1%
-                  </li>
-                </ul>
-              </div>
-              <div className={s.operation_crypt}>
-                <ul>
-                  <li>
-                    <b>9.195</b> ETH
-                  </li>
-                  <li>
-                    <b>1.682</b> ETH
-                  </li>
-                  <li>
-                    <b>0.224</b> ETH
-                  </li>
-                  <li>
-                    <b>0.112</b> ETH
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className={s.more_info}>
-            <div className={s.info}>
-              Before investing, carefully consider all risks because by clicking
-              the
-              <br /> button below you agree that only you are responsible for
-              all financial
-              <br /> losses incurred
-            </div>
-          </div>
-          <div className={s.pay_crypt}>
-            <button className={s.pay}> Supply 11.213 TON</button>
+        <div className={s.analysis}>
+          <h2 className={s.analysis_title}>Asset analysis</h2>
+          <img src={analysis} alt="" />
+          <div className={s.analysis_text_block}>
+            <div className={s.analysis_text}>USDT/ETH</div>
+            <div className={s.analysis_text}>USDT/WETH</div>
+            <div className={s.analysis_text}>USDC/WBTC</div>
+            <div className={s.analysis_text}>ETH/ARB</div>
           </div>
         </div>
+      </div>
+      <div className={s.bottom_container}>
+        <div className={s.operations}>
+          <h2 className={s.operations_title}>Recent operations</h2>
+
+          <div className={s.operations_content}>
+            <div className={s.operations_block}>
+              <div className={s.operations_left_wrapper}>
+                <div className={s.operations_name}>Deposit</div>
+                <div className={s.operations_date}>01/01/2024</div>
+              </div>
+              <div className={s.operations_right_wrapper}>
+                <div className={s.operations_price}>+ $750</div>
+              </div>
+            </div>
+            <div className={s.operations_block}>
+              <div className={s.operations_left_wrapper}>
+                <div className={s.operations_name}>Withdrawal</div>
+                <div className={s.operations_date}>07/10/2023</div>
+              </div>
+              <div className={s.operations_right_wrapper}>
+                <div className={s.operations_price}>- $3500</div>
+              </div>
+            </div>
+            <div className={s.operations_block}>
+              <div className={s.operations_left_wrapper}>
+                <div className={s.operations_name}>Deposit</div>
+                <div className={s.operations_date}>15/06/2023</div>
+              </div>
+              <div className={s.operations_right_wrapper}>
+                <div className={s.operations_price}>+ $1200</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className={s.assets}>
+          <h2 className={s.assets_title}>Assets overview</h2>
+
+          <div className={s.assets_content}>
+            <div className={s.assets_block}>
+              <div className={s.assets_block_title}>Asset</div>
+              <div className={s.assets_block_item}>USDT/ETH</div>
+              <div className={s.assets_block_item}>ETH/ARB</div>
+              <div className={s.assets_block_item}>USDT/WETH</div>
+              <div className={s.assets_block_item}>USDC/WBTC</div>
+            </div>
+            <div className={s.assets_block}>
+              <div className={s.assets_block_title}>Balance</div>
+              <div className={s.assets_block_item}>$4100</div>
+              <div className={s.assets_block_item}>$750</div>
+              <div className={s.assets_block_item}>$3500</div>
+              <div className={s.assets_block_item}>$1200</div>
+            </div>
+            <div className={s.assets_block}>
+              <div className={s.assets_block_title}>Price change</div>
+              <div className={s.assets_block_item}>+0.02%</div>
+              <div className={s.assets_block_item}>0.00%</div>
+              <div className={s.assets_block_item}>+23.40%</div>
+              <div className={s.assets_block_item}>+7.10%</div>
+            </div>
+            <div className={s.assets_block}>
+              <div className={s.assets_block_title}>Allocation</div>
+              <div className={s.assets_block_item}>45%</div>
+              <div className={s.assets_block_item}>25%</div>
+              <div className={s.assets_block_item}>17%</div>
+              <div className={s.assets_block_item}>13%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className={s.risks}>
+        <img src={risks} alt="" />
       </div>
     </div>
   );
