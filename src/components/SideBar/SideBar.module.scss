@@ -2,13 +2,13 @@
 @import "../../styles/index.module.scss";
 
 .container {
-  width: 200px;
+  width: 242px;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: $body-background-light;
-  margin-right: 20px;
+  margin-right: 30px;
 }
 
 .sidebar__top {

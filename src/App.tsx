@@ -8,7 +8,7 @@ function App() {
       {/* <Overview /> */}
       {/* <Notification /> */}
       {/* <Documents /> */}
-      <ContactUs />
+      {/* <ContactUs /> */}
     </div>
   );
 }
