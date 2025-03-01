@@ -1,0 +1,41 @@
+@import "../../../styles/variables.module";
+
+//BODY
+
+
+//REF
+.ref {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+.ref_item {
+  padding: 16px 0 16px 10px;
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-weight: 400;
+  font-size: 16px;
+  color: black;
+  height: 50px;
+  border-radius: 14px;
+  background: var(#{--components-background-light});
+  box-shadow: 0 0 10px 0 rgba(212, 212, 212, 0.5);
+}
+.ref_item:after {
+  content: "";
+  position: absolute;
+  top: 30%;
+  right: 0;
+  transform: translateX(-10px) rotate(-315deg);
+  right: 0;
+  width: 12px;
+  height: 12px;
+  border-width: 0 2px 2px 0;
+  border-style: solid;
+  border-color: #000;
+}
+

@@ -2,11 +2,10 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import s from "./ComponentDocument.module.scss";
 import GlobalSvgSelector from "../../../assets/global/GlobalSvgSelector";
-type Props = {};
 
-export const ComponentDocument = (props: Props) => {
-  const [isOpenEmail, setIsOpenEmail] = useState(false);
-  const [isOpenWallet, setIsOpenWallet] = useState(false);
+export const ComponentDocument = () => {
+  const [isOpenEmail, setIsOpenEmail] = useState<boolean>(false);
+  const [isOpenWallet, setIsOpenWallet] = useState<boolean>(false);
 
   const toggleEmailDropdown = () => {
     setIsOpenEmail(!isOpenEmail);
